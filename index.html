@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" rel="stylesheet">
+    
+    <title>Заметки</title>
+    
+</head>
+
+<body>    
+
+<div class="wrapper">
+
+    <div class="buttons">
+            <div>
+                <input type="button" id="btnAdd" value="Добавить заметку" />
+            </div>
+
+            <div>
+                <input type="button" id="btnSave" value="Сохранить" />
+            </div>
+
+            <div>
+                <input type="button" id="btnEdit" value="Редактировать" />
+            </div>
+
+            <div>
+                <input type="button" id="btnDelete" value="Удалить" />
+            </div>
+
+    </div>
+
+    <div id="textArea">
+        <div id="noteInfo">
+                <p>Имя заметки:</p>
+                <textarea rows="1" cols="30"  maxlength="28" id="noteName"></textarea>
+                <p>Введите текст заметки:</p>
+                <div class="center">
+                    <textarea rows="23" cols="166"  required id="noteText"></textarea>  
+                </div>
+        </div>
+    </div>
+
+    <div class="note_list">
+        <div id="text">
+            <p id="noteList">Список заметок:</p>
+            
+            <div id="notes">
+
+            </div>
+            
+        
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+    
+<div>
+    
+</body>
+
+
+
+</html>

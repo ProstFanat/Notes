@@ -33,20 +33,45 @@
                 <input type="button" id="btnDelete" value="Удалить" />
             </div>
 
+            <div>
+                <input type="button" id="btnCategories" value="Назад к категориям" />
+            </div>
+
     </div>
 
     <div id="textArea">
         <div id="noteInfo">
+               
+            <div>
                 <p>Имя заметки:</p>
                 <textarea rows="1" cols="30"  maxlength="28" id="noteName"></textarea>
-                <p>Введите текст заметки:</p>
-                <div class="center">
-                    <textarea rows="23" cols="166"  required id="noteText"></textarea>  
-                </div>
+            </div>   
+                    
+            <div id="radios">
+                <p>Категория:</p>
+                <input type="radio" id="withOut" name="category" checked>
+                <label for="withOut">Без категории</label>
+
+                <input type="radio" id="study" name="category">
+                <label for="study">Обучение</label>
+
+                <input type="radio" id="food" name="category">
+                <label for="food">Покупки</label>
+            </div>
+                
+
+            <p>Введите текст заметки:</p>
+            <div class="center">
+                <textarea rows="23" cols="166"  required id="noteText"></textarea>  
+            </div>
         </div>
     </div>
 
-    <div class="note_list">
+    <div class="note-list">
+        <div id="categories">
+            
+        </div>
+
         <div id="text">
             <p id="noteList">Список заметок:</p>
             

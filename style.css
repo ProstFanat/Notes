@@ -19,7 +19,7 @@ body{
     flex-direction: row;
 }
 
-#btnAdd, #btnSave, #btnEdit, #btnDelete{
+#btnAdd, #btnSave, #btnEdit, #btnDelete, #btnCategories{
     font-size: 18px;
     color: darkorange;
     font-weight: bold;
@@ -44,17 +44,22 @@ body{
     margin-right: 15px;
 }
 
-#btnAdd, #btnSave, #btnEdit, #btnDelete:focus {
+#btnAdd, #btnSave, #btnEdit, #btnDelete, #btnCategories:focus {
     outline: none;
 }
 
-#btnAdd, #btnSave, #btnEdit, #btnDelete:hover {
+#btnAdd, #btnSave, #btnEdit, #btnDelete, #btnCategories:hover {
     cursor: pointer;
 } 
 
+#btnCategories {
+    display: none;
+    margin-left: 15px;
+}
+
 #textArea {
     border: 4px solid darkorange;
-    height: 520px;
+    height: 600px;
     width: 1250px;
     margin-bottom: 10px;
     background-color: black;
@@ -91,13 +96,14 @@ body{
 }
 
 #text {
-    border: 4px solid darkorange;
+    display: none;
     width: 1250px;
     min-height: 200px;
 }
 
-.note_list {
+.note-list {
     background-color: black;
+    border: 4px solid darkorange;
     width: 1258px;
 }
 
@@ -105,8 +111,32 @@ body{
     padding-left: 20px;
 }
 
+.note-list #categories {
+    display: flex;
+    flex-wrap: wrap;
+}
 
-.note_list #text #notes {
+.note-list #categories .category-style {
+    border: 2px solid darkorange;
+    display: flex;
+    justify-content: center;
+    width: 208px;
+    height: 120px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.note-list #categories .category-style p {
+    padding-top: 25px;
+}
+
+.note-list #categories .category-style:hover {
+    cursor: pointer;
+}
+
+
+.note-list #text #notes {
     display: flex;
     list-style-type: none;
     flex-wrap: wrap;
@@ -114,7 +144,7 @@ body{
     margin-top: -15px;
 }
 
-.note_list #text #notes .noteStyle {
+.note-list #text #notes .noteStyle {
     display: flex;
     flex-direction: column;
     border: 2px solid darkorange;
@@ -127,6 +157,6 @@ body{
     white-space: normal;
 }
 
-.note_list #text #notes .noteStyle:hover {
+.note-list #text #notes .noteStyle:hover {
     cursor: pointer;
 }

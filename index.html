@@ -5,49 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Saira+Semi+Condensed&display=swap" rel="stylesheet">
-    
+
     <title>Заметки</title>
     
 </head>
 
 <body>    
 
-<div class="wrapper">
+<div class="container">
 
-    <div class="buttons">
+    <div class="buttons-list">
             <div>
-                <input type="button" id="btnAdd" value="Добавить заметку" />
+                <input type="button" id="btnAddNote" class="buttons" value="Добавить заметку" />
             </div>
 
             <div>
-                <input type="button" id="btnSave" value="Сохранить" />
+                <input type="button" id="btnSaveNote" class="buttons"  value="Сохранить" />
             </div>
 
             <div>
-                <input type="button" id="btnEdit" value="Редактировать" />
+                <input type="button" id="btnEditNote" class="buttons"  value="Редактировать" />
             </div>
 
             <div>
-                <input type="button" id="btnDelete" value="Удалить" />
+                <input type="button" id="btnDeleteNote" class="buttons"  value="Удалить" />
             </div>
+
+            <div>
+                <input type="button" id="btnAddCategory" class="buttons"  value="Добавить категорию" />
+            </div>
+
+            <div>
+                <input type="button" id="btnSaveCategory" class="buttons"  value="Сохранить категорию" />
+            </div>
+
+            <div>
+                <input type="button" id="btnEditCategory" class="buttons"  value="Редактировать категорию" />
+            </div>
+
+            <div>
+                <input type="button" id="btnEditSaveCategory" class="buttons"  value="Отредактировать" />
+            </div>
+
+            <div>
+                <input type="button" id="btnDeleteCategory" class="buttons"  value="Удалить категорию" />
+            </div>
+
+            <div>
+                <input type="button" id="btnBack" class="buttons"  value="Назад" />
+            </div>
+
 
     </div>
 
-    <div id="textArea">
-        <div id="noteInfo">
+    <div id="content">
+        <div id="noteContent" class="form-group-control">
+               
+            <div>
                 <p>Имя заметки:</p>
                 <textarea rows="1" cols="30"  maxlength="28" id="noteName"></textarea>
-                <p>Введите текст заметки:</p>
-                <div class="center">
-                    <textarea rows="23" cols="166"  required id="noteText"></textarea>  
-                </div>
-        </div>
-    </div>
+            </div>   
+                    
+            <div id="radios">
+                <p>Категория:</p>
+            </div>
+                
 
-    <div class="note_list">
-        <div id="text">
+            <p>Введите текст заметки:</p>
+            <div class="center">
+                <textarea rows="23" cols="166"  required id="noteText"></textarea>  
+            </div>
+        </div>
+
+        <div id="addCategory" class='form-group-control'>
+            <p>Имя категории</p>
+            <textarea rows="1" cols="30"  maxlength="28" id="categoryName"></textarea>
+        </div>
+
+        <div id="text" class='form-group-control'>
             <p id="noteList">Список заметок:</p>
             
             <div id="notes">
@@ -56,12 +91,17 @@
             
         
         </div>
+
     </div>
 
-    <script src="scripts.js"></script>
-
     
+    <div id="categories">
+            
+    </div>     
+  
 <div>
+
+    <script src="scripts.js"></script>
     
 </body>
 

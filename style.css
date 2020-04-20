@@ -9,63 +9,51 @@ body{
     background-size: 100%;
 }
 
-.wrapper {
+.container {
     max-width: 1250px;
     margin:  0 auto;
 }
 
-.buttons {
+.buttons-list {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-#btnAdd, #btnSave, #btnEdit, #btnDelete{
+.buttons{
     font-size: 18px;
     color: darkorange;
     font-weight: bold;
-    width: 200px;
+    width: 250px;
     height: 50px;
     border: 4px solid darkorange;
     background-color: black;
     margin-bottom: 10px;
     text-align: center;
-}
-
-#btnAdd {
+    margin-right: 15px;
     display: block;
 }
 
-#btnSave {
-    display: none;
-}
-
-#btnEdit, #btnDelete {
-    display: none;
-    margin-right: 15px;
-}
-
-#btnAdd, #btnSave, #btnEdit, #btnDelete:focus {
+.buttons:focus {
     outline: none;
 }
 
-#btnAdd, #btnSave, #btnEdit, #btnDelete:hover {
+.buttons:hover {
     cursor: pointer;
 } 
 
-#textArea {
+#content {
     border: 4px solid darkorange;
-    height: 520px;
+    min-height: 600px;
     width: 1250px;
     margin-bottom: 10px;
-    background-color: black;
-    
+    background-color: black;    
 }
 
-#textArea p {
+#content p {
     margin-left: -20px;
 }
 
-#textArea textarea {
+#content textarea {
     border: 1px solid darkorange;
     resize: none;
     background-color: darkorange;
@@ -73,40 +61,39 @@ body{
     
 }
 
-#textArea textarea:enabled {
+#content textarea:enabled {
     outline: none;
 }
 
-#textArea #noteInfo .center {
+#content #noteContent .center {
     display: flex;
     
 }
 
-#noteInfo {
+#noteContent, #text, #addCategory {
     margin-left: 35px;
 }
 
-#textArea #noteInfo {
+#content #noteContent {
     display: none;
 }
 
-#text {
-    border: 4px solid darkorange;
+#content #addCategory {
+    display: none;
+}
+
+#content #radios {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#content #text {
+    display: none;
     width: 1250px;
     min-height: 200px;
 }
 
-.note_list {
-    background-color: black;
-    width: 1258px;
-}
-
-#noteList {
-    padding-left: 20px;
-}
-
-
-.note_list #text #notes {
+#content #text #notes {
     display: flex;
     list-style-type: none;
     flex-wrap: wrap;
@@ -114,7 +101,7 @@ body{
     margin-top: -15px;
 }
 
-.note_list #text #notes .noteStyle {
+#content #text #notes .note {
     display: flex;
     flex-direction: column;
     border: 2px solid darkorange;
@@ -127,6 +114,53 @@ body{
     white-space: normal;
 }
 
-.note_list #text #notes .noteStyle:hover {
+#content #text #notes .note:hover {
     cursor: pointer;
+}
+
+#categories {
+    background-color: black;
+    border: 4px solid darkorange;
+    width: 1258px;
+}
+
+#noteList {
+    padding-left: 20px;
+}
+
+#categories {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#categories .category {
+    border: 2px solid darkorange;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    width: 208px;
+    height: 120px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#categories .category p {
+    padding-top: 25px;
+}
+
+#categories .category:hover {
+    cursor: pointer;
+}
+
+.category {
+    border: 2px solid darkorange;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    width: 208px;
+    height: 120px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
